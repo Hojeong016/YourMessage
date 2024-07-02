@@ -200,7 +200,7 @@ if st.button('확인:mag_right:'):
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<div class='footer'>", unsafe_allow_html=True)
 
-# 이미지를 클릭했을 때 이동할 링크 URL
+## 이미지를 클릭했을 때 이동할 링크 URL
 link_url = "https://www.instagram.com/valgwang/"
 
 # 이미지 파일 읽기
@@ -210,21 +210,11 @@ with open('logoImg/logo.png', 'rb') as f:
 # 이미지 데이터를 base64로 인코딩
 image_base64 = b64encode(image_data).decode()
 
-# 이미지를 클릭 시 이동할 JavaScript 코드 생성
-js_code = f'''
-<script>
-function goToLink() {{
-    window.open("{link_url}", "_blank");
-}}
-</script>
-'''
+# 이미지에 링크 URL을 적용하여 HTML 코드 생성
+image_html = f"<a href='{link_url}' target='_blank'><img src='data:image/png;base64,{image_base64}' class='footer-logo' style='cursor: pointer; width: 150px;'></a>"
 
-# JavaScript 코드 삽입 (unsafe_allow_html 사용)
-st.markdown(js_code, unsafe_allow_html=True)
-
-# 이미지에 onClick 이벤트 추가하여 링크로 이동
-st.markdown(f"<img src='data:image/png;base64,{image_base64}' class='footer-logo' onclick='goToLink()' style='cursor: pointer; width: 150px;'></p>", unsafe_allow_html=True)
-
+# 이미지 출력
+st.markdown(image_html, unsafe_allow_html=True)
 st.markdown("<div  class='footer-small-text'>도움 주신 분: 채호정</div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-light-text'>&#128231;coghwjd4051@gmail.com</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
