@@ -23,7 +23,6 @@ st.markdown("""
 }
 .section-description {
     font-size: 15px;
-    white-space: normal;
     color: #666666;
     margin-bottom: 20px;
 }
@@ -99,7 +98,6 @@ st.markdown("""
         color: #ffffff;
     }
     .section-description {
-        white-space: nowrap;
         color: #ffffff;
     }
     .section-line {
