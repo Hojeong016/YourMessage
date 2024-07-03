@@ -15,13 +15,14 @@ image_path_map = {
 # CSS 스타일 지정
 st.markdown("""
 <style>
+/* 라이트 모드 스타일 */
 .section-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .section-description {
-    font-size: 12px;
+    font-size: 15px;
     color: #666666;
     margin-bottom: 20px;
 }
@@ -42,14 +43,15 @@ st.markdown("""
     padding: 8px;
     text-align: left;
     border: 1px solid #dddddd;
-    white-space: nowrap; 
 }
 .responsive-table th {
     background-color: #f2f2f2;
     font-weight: bold; 
+    white-space: nowrap;  /* 첫 번째 행의 열들은 줄바꿈되지 않도록 설정 */
 }
 .responsive-table td {
     min-width: 200px; 
+    white-space: normal; /* 나머지 행들은 줄바꿈되도록 설정 */
 }
 
 .footer {
@@ -81,6 +83,36 @@ st.markdown("""
     font-size: 10px; 
     color: #666666; 
     margin-top: 5px; 
+}
+
+/* 다크 모드 스타일 */
+@media (prefers-color-scheme: dark) {
+    .section-title {
+        color: #ffffff;
+    }
+    .section-description {
+        color: #ffffff;
+    }
+    .section-line {
+        border-top: 1px solid #444444;
+    }
+    .responsive-table th {
+        background-color: #6b9ea1;
+        color: #ffffff;
+    }
+    .responsive-table td {
+        border: 1px solid #444444;
+        color: #dddddd;
+    }
+    .footer {
+        border-top: 1px solid #444444;
+    }
+    .footer-small-text, .footer-light-text {
+        color: #bbbbbb;
+    }
+    .reference-info {
+        color: #bbbbbb;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -215,6 +247,8 @@ image_html = f"<a href='{link_url}' target='_blank'><img src='data:image/png;bas
 
 # 이미지 출력
 st.markdown(image_html, unsafe_allow_html=True)
+st.markdown("<div  class='footer-small-text'>발광 | 세상을 밝히는 광고</div>", unsafe_allow_html=True)
+st.markdown("<div  class='footer-light-text'>&#128231;Levi.yonghun@gmail.com</div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-small-text'>도움 주신 분: 채호정</div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-light-text'>&#128231;coghwjd4051@gmail.com</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
