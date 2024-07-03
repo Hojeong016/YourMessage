@@ -23,6 +23,7 @@ st.markdown("""
 }
 .section-description {
     font-size: 15px;
+    white-space: normal;
     color: #666666;
     margin-bottom: 20px;
 }
@@ -39,18 +40,25 @@ st.markdown("""
     overflow-x: auto;
     display: block;
 }
+
 .responsive-table th, .responsive-table td {
     padding: 8px;
     text-align: left;
     border: 1px solid #dddddd;
 }
-.responsive-table th {
-    background-color: #f2f2f2;
-    font-weight: bold; 
-    white-space: nowrap;  /* 첫 번째 행의 열들은 줄바꿈되지 않도록 설정 */
+
+/* 첫 번째 행의 열들에 대한 스타일 */
+.responsive-table th:first-child {
+    min-width: 140px; /* 첫 번째 열의 최소 너비 설정 */
+    max-width: 400px; /* 첫 번째 열의 최대 너비 설정 */
+    white-space: nowrap; /* 줄바꿈 방지 */
 }
-.responsive-table td {
-    min-width: 200px; 
+
+/* 나머지 행들의 열들에 대한 스타일 */
+.responsive-table th:not(:first-child),
+.responsive-table td:not(:first-child) {
+    min-width: 350px; /* 기본적인 최소 너비 설정 */
+    max-width: 500px; /* 기본적인 최대 너비 설정 */
     white-space: normal; /* 나머지 행들은 줄바꿈되도록 설정 */
 }
 
@@ -91,6 +99,7 @@ st.markdown("""
         color: #ffffff;
     }
     .section-description {
+        white-space: nowrap;
         color: #ffffff;
     }
     .section-line {
