@@ -127,7 +127,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Manifest 파일 추가
 st.markdown("""
 <link rel="manifest" href="/manifest.json">
 """, unsafe_allow_html=True)
