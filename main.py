@@ -239,23 +239,30 @@ if st.button('확인:mag_right:'):
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<div class='footer'>", unsafe_allow_html=True)
 
-## 이미지를 클릭했을 때 이동할 링크 URL
+# logo 이미지를 클릭했을 때 이동할 링크 URL
 link_url = "https://www.instagram.com/valgwang/"
 
-# 이미지 파일 읽기
+# logo 이미지 파일 읽은 후 base64로 인코딩
 with open('logoImg/logo.png', 'rb') as f:
     image_data = f.read()
 
-# 이미지 데이터를 base64로 인코딩
 image_base64 = b64encode(image_data).decode()
 
-# 이미지에 링크 URL을 적용하여 HTML 코드 생성
+# logo 이미지에 링크 URL을 적용하여 HTML 코드 생성
 image_html = f"<a href='{link_url}' target='_blank'><img src='data:image/png;base64,{image_base64}' class='footer-logo' style='cursor: pointer; width: 150px;'></a>"
 
-# 이미지 출력
+with open('logoImg/instarLogo.png', 'rb') as f:
+    instar_image_data = f.read()
+    
+instar_image_base64 = b64encode(instar_image_data).decode()
+
+instar_image_html = f"<img src='data:image/jpeg;base64,{instar_image_base64}' alt='instarLogo' width='12'/>"
+
 st.markdown(image_html, unsafe_allow_html=True)
 st.markdown("<div  class='footer-small-text'>발광 | 세상을 밝히는 광고</div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-light-text'>&#128231;Levi.yonghun@gmail.com</div>", unsafe_allow_html=True)
+st.markdown(f"<div  class='footer-light-text'>{instar_image_html} @valgwang</div>", unsafe_allow_html=True)
+st.markdown("<div></div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-small-text'>도움 주신 분: 채호정</div>", unsafe_allow_html=True)
 st.markdown("<div  class='footer-light-text'>&#128231;coghwjd4051@gmail.com</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
