@@ -4,6 +4,9 @@ import streamlit as st
 import pandas as pd
 from base64 import b64encode
 
+os.environ["OPENAI_API_KEY"] = st.secrets['API_KEY']
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
 image_path_map = {
     "매우 위험": "scoreImg/5.jpg",
     "위험": "scoreImg/4.jpg",
@@ -124,8 +127,25 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-os.environ["OPENAI_API_KEY"] = st.secrets['API_KEY']
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+# Manifest 파일 추가
+st.markdown("""
+<link rel="manifest" href="/manifest.json">
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });a
+    });
+}
+</script>
+""", unsafe_allow_html=True)
+
 
 st.markdown("<div class='section-title'>너의 문자는&#128233;</div>", unsafe_allow_html=True)
 
