@@ -127,25 +127,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<link rel="manifest" href="/manifest.json">
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<script>
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
-        });a
-    });
-}
-</script>
-""", unsafe_allow_html=True)
-
-
 st.markdown("<div class='section-title'>너의 문자는&#128233;</div>", unsafe_allow_html=True)
 
 st.markdown("<div class='section-line'></div>", unsafe_allow_html=True)
