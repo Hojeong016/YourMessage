@@ -1,8 +1,11 @@
+
 import os
 from openai import OpenAI
 import streamlit as st
 import pandas as pd
 from base64 import b64encode
+
+
 
 os.environ["OPENAI_API_KEY"] = st.secrets['API_KEY']
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
@@ -14,12 +17,12 @@ image_path_map = {
     "안전": "scoreImg/2.jpg",
     "매우 안전": "scoreImg/1.jpg"
 }
-# 메타 태그 추가
+
 st.markdown("""
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta name="naver-site-verification" content="1f5c14e8791d37847f896307493a36eb0ced9ff4" />
+    <meta name="naver-site-verification" content="naver1c9a3278fb62fa5ab61d951fb51c72f1.html" />
 </head>
 <body>
 </body>
