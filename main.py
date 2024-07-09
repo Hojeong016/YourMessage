@@ -22,7 +22,7 @@ st.markdown("""
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta name="naver-site-verification" content="naver-site-verification: naver1c9a3278fb62fa5ab61d951fb51c72f1.html
+   <meta name="naver-site-verification" content="naver-site-verification: 1f5c14e8791d37847f896307493a36eb0ced9ff4
 "/>
 </head>
 <body>
