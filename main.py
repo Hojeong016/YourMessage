@@ -15,16 +15,8 @@ image_path_map = {
     "매우 안전": "scoreImg/1.jpg"
 }
 
-# 메타 태그 추가
 st.markdown("""
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta name="naver-site-verification" content="1f5c14e8791d37847f896307493a36eb0ced9ff4" />
-</head>
-<body>
-</body>
-</html>
+<meta name="naver-site-verification" content="1f5c14e8791d37847f896307493a36eb0ced9ff4" />
 """, unsafe_allow_html=True)
 
 # CSS 스타일 지정
