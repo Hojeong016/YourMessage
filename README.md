@@ -1,10 +1,7 @@
-# YourMessage
-+ [Project 소개](#1.--Project-소개)
-
-+ [주요 기능 코드 리뷰](#3.--주요-기능-코드-리뷰)
+# ✉️YourMessage
 
 ---
-### 1.  Project 소개
+### Project 소개
 
 '너의 문자는' 프로젝트는 스미싱 문자 사기 예방을 위해 open AI를 활용한 문자 분석 서비스입니다. 
 
@@ -15,6 +12,9 @@
 
 #### <개발 환경>
 
-<img src="https://github.com/user-attachments/assets/69479d9f-4de3-42a9-bac0-3f51b5a58fb8" width="380" height="80"/>
+<img src="https://github.com/user-attachments/assets/69479d9f-4de3-42a9-bac0-3f51b5a58fb8" width="380" height="400"/>
+
+#### <사이트 이미지>
+![화면 캡처 2024-08-10 233706](https://github.com/user-attachments/assets/9f00a703-ad02-4b19-9340-d8190e522e1c)
 
 ---
