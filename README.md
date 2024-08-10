@@ -15,6 +15,6 @@
 
 #### <개발 환경>
 
-<img src="https://github.com/user-attachments/assets/cfdf7ab3-8b3d-422d-9713-57870b80f73d" width="380" height="80"/>
+<img src="https://github.com/user-attachments/assets/69479d9f-4de3-42a9-bac0-3f51b5a58fb8" width="380" height="80"/>
 
 ---
